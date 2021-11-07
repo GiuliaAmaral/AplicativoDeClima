@@ -28,8 +28,6 @@ export default function Inicio() {
           try {
             let respostaApi = await fetch(`https://weather.contrateumdev.com.br/api/weather?lat=${dados.coords.latitude}&lon=${dados.coords.longitude}`, requestOptions);
             respostaApi = await respostaApi.json();
-            respostaApi.horas = await buscaHorariosLocal(respostaApi.coord.lat, respostaApi.coord.lon);
-            console.log(respostaApi);
 
             if (respostaApi.cod === "404") {
               await setMsg({
@@ -40,6 +38,7 @@ export default function Inicio() {
               })
               await setCarregando(false);
             } else {
+              respostaApi.horas = await buscaHorariosLocal(respostaApi.coord.lat, respostaApi.coord.lon);
               await setPesquisando(false)
               await setDadosCidade(respostaApi);
               await setCarregando(false);
@@ -85,7 +84,6 @@ export default function Inicio() {
     try {
       let respostaApi = await fetch(`https://weather.contrateumdev.com.br/api/weather/city/?city=${dadosFormJson.city}`, requestOptions);
       respostaApi = await respostaApi.json();
-      respostaApi.horas = await buscaHorariosLocal(respostaApi.coord.lat, respostaApi.coord.lon);
 
       if (respostaApi.cod === "404") {
         await setMsg({
@@ -96,6 +94,7 @@ export default function Inicio() {
         })
         await setCarregando(false);
       } else {
+        respostaApi.horas = await buscaHorariosLocal(respostaApi.coord.lat, respostaApi.coord.lon);
         await setPesquisando(false)
         await setDadosCidade(respostaApi);
         await setCarregando(false);
