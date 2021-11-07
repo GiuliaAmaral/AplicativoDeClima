@@ -106,7 +106,7 @@ export default function Inicio() {
                             <div className="card shadow bg-body rounded">
                               <div className="card-body">
                                 <h5 className="card-title">{dadosCidade?.main?.temp_min}°C</h5>
-                                <p className="card-text">Miníma</p>
+                                <p className="card-text">Mínima</p>
                               </div>
                             </div>
                           </div>
@@ -162,7 +162,7 @@ export default function Inicio() {
 
                   <nav className="navbar navbar-light bg-light d-block shadow bg-body">
                     <form onSubmit={onSubmitCidade}>
-                      <input class="form-control d-inline-block ms-3 mb-1" name="city" type="text" placeholder="Escreva aqui o nome de uma cidade" style={{ width: "85%" }} required />
+                      <input class="form-control d-inline-block ms-3 mb-1" name="city" type="text" placeholder="Escreva aqui o nome de uma cidade" style={{ width: "85%" }} autoFocus required />
                       <button type="submit" className="router float-end me-2 text-dark btn btn-link p-0"><i className="bi bi-check-lg fs-1"></i></button>
                     </form>
                   </nav>
