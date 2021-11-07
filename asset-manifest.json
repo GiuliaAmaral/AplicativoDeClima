@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.1eecee0d.chunk.css",
-    "main.js": "/static/js/main.1bf6872f.chunk.js",
-    "main.js.map": "/static/js/main.1bf6872f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.eb4e8573.js",
-    "runtime-main.js.map": "/static/js/runtime-main.eb4e8573.js.map",
-    "static/css/2.f2e2c62c.chunk.css": "/static/css/2.f2e2c62c.chunk.css",
-    "static/js/2.a81b45b1.chunk.js": "/static/js/2.a81b45b1.chunk.js",
-    "static/js/2.a81b45b1.chunk.js.map": "/static/js/2.a81b45b1.chunk.js.map",
-    "static/js/3.a89e6175.chunk.js": "/static/js/3.a89e6175.chunk.js",
-    "static/js/3.a89e6175.chunk.js.map": "/static/js/3.a89e6175.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.f2e2c62c.chunk.css.map": "/static/css/2.f2e2c62c.chunk.css.map",
-    "static/css/main.1eecee0d.chunk.css.map": "/static/css/main.1eecee0d.chunk.css.map",
-    "static/js/2.a81b45b1.chunk.js.LICENSE.txt": "/static/js/2.a81b45b1.chunk.js.LICENSE.txt",
-    "static/media/bootstrap-icons.css": "/static/media/bootstrap-icons.7165e5d7.woff",
-    "static/media/fav-clima.02f1373e.png": "/static/media/fav-clima.02f1373e.png",
-    "static/media/global.css": "/static/media/nuvens.c192b176.jpg"
+    "main.css": "/AplicativoDeClima/static/css/main.70a8dd2b.chunk.css",
+    "main.js": "/AplicativoDeClima/static/js/main.1bf6872f.chunk.js",
+    "main.js.map": "/AplicativoDeClima/static/js/main.1bf6872f.chunk.js.map",
+    "runtime-main.js": "/AplicativoDeClima/static/js/runtime-main.60553798.js",
+    "runtime-main.js.map": "/AplicativoDeClima/static/js/runtime-main.60553798.js.map",
+    "static/css/2.8f72fee9.chunk.css": "/AplicativoDeClima/static/css/2.8f72fee9.chunk.css",
+    "static/js/2.a81b45b1.chunk.js": "/AplicativoDeClima/static/js/2.a81b45b1.chunk.js",
+    "static/js/2.a81b45b1.chunk.js.map": "/AplicativoDeClima/static/js/2.a81b45b1.chunk.js.map",
+    "static/js/3.a89e6175.chunk.js": "/AplicativoDeClima/static/js/3.a89e6175.chunk.js",
+    "static/js/3.a89e6175.chunk.js.map": "/AplicativoDeClima/static/js/3.a89e6175.chunk.js.map",
+    "index.html": "/AplicativoDeClima/index.html",
+    "static/css/2.8f72fee9.chunk.css.map": "/AplicativoDeClima/static/css/2.8f72fee9.chunk.css.map",
+    "static/css/main.70a8dd2b.chunk.css.map": "/AplicativoDeClima/static/css/main.70a8dd2b.chunk.css.map",
+    "static/js/2.a81b45b1.chunk.js.LICENSE.txt": "/AplicativoDeClima/static/js/2.a81b45b1.chunk.js.LICENSE.txt",
+    "static/media/bootstrap-icons.css": "/AplicativoDeClima/static/media/bootstrap-icons.7165e5d7.woff",
+    "static/media/fav-clima.02f1373e.png": "/AplicativoDeClima/static/media/fav-clima.02f1373e.png",
+    "static/media/global.css": "/AplicativoDeClima/static/media/nuvens.c192b176.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.eb4e8573.js",
-    "static/css/2.f2e2c62c.chunk.css",
+    "static/js/runtime-main.60553798.js",
+    "static/css/2.8f72fee9.chunk.css",
     "static/js/2.a81b45b1.chunk.js",
-    "static/css/main.1eecee0d.chunk.css",
+    "static/css/main.70a8dd2b.chunk.css",
     "static/js/main.1bf6872f.chunk.js"
   ]
 }
