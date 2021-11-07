@@ -21,6 +21,19 @@ code {
   min-height: 100vh;
 }
 
+.fundoNuvem.madrugada{
+  background-image: url("madrugada.jpg");
+}
+
+.fundoNuvem.tarde{
+  background-image: url("tarde.jpg");
+}
+
+.fundoNuvem.noite{
+  background-image: url("noite.jpg");
+}
+
+
 .conteudoNasNuvens{
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);

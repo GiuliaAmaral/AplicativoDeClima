@@ -19,17 +19,18 @@ export default function Inicio() {
         window.navigator.geolocation.getCurrentPosition(locationSucesso, locaionErro);
 
         async function locationSucesso(dados) {
-          console.log(dados)
 
           var requestOptions = {
             method: 'GET',
             redirect: 'follow'
           };
-      
+
           try {
             let respostaApi = await fetch(`https://weather.contrateumdev.com.br/api/weather?lat=${dados.coords.latitude}&lon=${dados.coords.longitude}`, requestOptions);
             respostaApi = await respostaApi.json();
-      
+            respostaApi.horas = await buscaHorariosLocal(respostaApi.coord.lat, respostaApi.coord.lon);
+            console.log(respostaApi);
+
             if (respostaApi.cod === "404") {
               await setMsg({
                 icon: <><i class="bi bi-x-circle-fill fs-1"></i></>,
@@ -43,7 +44,7 @@ export default function Inicio() {
               await setDadosCidade(respostaApi);
               await setCarregando(false);
             }
-      
+
           } catch (error) {
             await setMsg({
               icon: <><i class="bi bi-x-circle-fill fs-1"></i></>,
@@ -84,6 +85,7 @@ export default function Inicio() {
     try {
       let respostaApi = await fetch(`https://weather.contrateumdev.com.br/api/weather/city/?city=${dadosFormJson.city}`, requestOptions);
       respostaApi = await respostaApi.json();
+      respostaApi.horas = await buscaHorariosLocal(respostaApi.coord.lat, respostaApi.coord.lon);
 
       if (respostaApi.cod === "404") {
         await setMsg({
@@ -111,6 +113,48 @@ export default function Inicio() {
 
   }
 
+  async function buscaHorariosLocal(latitude, longitude) {
+    return new Promise(async (sucesso, erro)=>{
+      var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+  
+      try {
+        let respostaApi = await fetch(`http://api.geonames.org/timezoneJSON?lat=${latitude}&lng=${longitude}&username=giuliaamaral`, requestOptions);
+        respostaApi = await respostaApi.json();
+        let data = new Date(respostaApi.time);
+        let hora = data.getHours();
+      
+
+        if (hora >= 5 && hora <= 11) {
+          respostaApi.periodo = "manha";
+        }
+        if(hora >= 12 && hora <= 17){
+          respostaApi.periodo = "tarde";
+        } 
+        if(hora >= 18 && hora <= 23){
+          respostaApi.periodo = "noite";
+        } 
+        if(hora >= 0 && hora <= 4){
+          respostaApi.periodo = "madrugada";
+        } 
+
+        await sucesso(respostaApi);
+      } catch (error) {
+        await setMsg({
+          icon: <><i class="bi bi-x-circle-fill fs-1"></i></>,
+          titulo: "Erro",
+          msg: "Erro inesperado, tente novamente mais tarde",
+          btn: <><button className="btn btn-secondary" onClick={() => { window.location.reload() }}>Tentar novamente!</button></>
+        })
+        await setCarregando(false);
+        await erro(error);
+      }
+  
+    })
+  }
+
 
   return (<>
     {
@@ -123,12 +167,12 @@ export default function Inicio() {
           </>) : (<>
             {
               pesquisando === false ? (<>
-                <div className="Incio fundoNuvem">
+                <div className={`Incio fundoNuvem ${dadosCidade?.horas?.periodo}`}>
                   <div className="conteudoNasNuvens">
 
                     <nav className="navbar navbar-light bg-light d-block shadow bg-body" onClick={() => { setPesquisando(true) }}>
                       <button type="button" className="router float-start ms-2 text-dark btn btn-link p-0"><i className="bi bi-plus-lg fs-1"></i></button>
-                      <p className="fs-5 text-center mt-2 mb-2">{dadosCidade?.name || "Escolha a cidade"}</p>
+                      <p className="fs-5 text-center mt-2 mb-2">{dadosCidade?.name || "Escolha a cidade"} - {dadosCidade?.sys?.country}</p>
                     </nav>
 
                     <section className="text-center text-light m-5 p-5">
