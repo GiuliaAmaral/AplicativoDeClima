@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ReactPWAInstallProvider from "react-pwa-install";
+import App from './App';
 
 import 'jquery/dist/jquery.js';
 import 'bootstrap/dist/css/bootstrap.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import 'bootstrap/dist/js/bootstrap.js';
+import './global.css';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ReactPWAInstallProvider enableLogging>
+    <App/>
+  </ReactPWAInstallProvider>,
   document.getElementById('root')
 );
 
