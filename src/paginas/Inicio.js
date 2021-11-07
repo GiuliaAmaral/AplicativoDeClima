@@ -13,9 +13,55 @@ export default function Inicio() {
 
   // Função do react que é executada sempre que o componente é carregando
   useEffect(() => {
+    (async () => {
 
-    setCarregando(false);
+      if (window.navigator.geolocation) {
+        window.navigator.geolocation.getCurrentPosition(locationSucesso, locaionErro);
 
+        async function locationSucesso(dados) {
+          console.log(dados)
+
+          var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+          };
+      
+          try {
+            let respostaApi = await fetch(`https://weather.contrateumdev.com.br/api/weather?lat=${dados.coords.latitude}&lon=${dados.coords.longitude}`, requestOptions);
+            respostaApi = await respostaApi.json();
+      
+            if (respostaApi.cod === "404") {
+              await setMsg({
+                icon: <><i class="bi bi-x-circle-fill fs-1"></i></>,
+                titulo: "Erro",
+                msg: "Cidade não encontrada,verifique novamente",
+                btn: <><button className="btn btn-secondary" onClick={() => { window.location.reload() }}>Tentar novamente!</button></>
+              })
+              await setCarregando(false);
+            } else {
+              await setPesquisando(false)
+              await setDadosCidade(respostaApi);
+              await setCarregando(false);
+            }
+      
+          } catch (error) {
+            await setMsg({
+              icon: <><i class="bi bi-x-circle-fill fs-1"></i></>,
+              titulo: "Erro",
+              msg: "Erro inesperado, tente novamente mais tarde",
+              btn: <><button className="btn btn-secondary" onClick={() => { window.location.reload() }}>Tentar novamente!</button></>
+            })
+            await setCarregando(false);
+          }
+        }
+
+        async function locaionErro(erro) {
+          await setPesquisando(true);
+          await setCarregando(false);
+        }
+      }
+
+    })()
   }, [])
 
   async function onSubmitCidade(e) {
