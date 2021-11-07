@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/AplicativoDeClima/static/css/main.70a8dd2b.chunk.css",
-    "main.js": "/AplicativoDeClima/static/js/main.1bf6872f.chunk.js",
-    "main.js.map": "/AplicativoDeClima/static/js/main.1bf6872f.chunk.js.map",
+    "main.js": "/AplicativoDeClima/static/js/main.2d255e9a.chunk.js",
+    "main.js.map": "/AplicativoDeClima/static/js/main.2d255e9a.chunk.js.map",
     "runtime-main.js": "/AplicativoDeClima/static/js/runtime-main.60553798.js",
     "runtime-main.js.map": "/AplicativoDeClima/static/js/runtime-main.60553798.js.map",
     "static/css/2.8f72fee9.chunk.css": "/AplicativoDeClima/static/css/2.8f72fee9.chunk.css",
@@ -23,6 +23,6 @@
     "static/css/2.8f72fee9.chunk.css",
     "static/js/2.a81b45b1.chunk.js",
     "static/css/main.70a8dd2b.chunk.css",
-    "static/js/main.1bf6872f.chunk.js"
+    "static/js/main.2d255e9a.chunk.js"
   ]
 }

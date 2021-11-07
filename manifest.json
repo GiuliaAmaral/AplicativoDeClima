@@ -3,17 +3,17 @@
   "name": "App Clima",
   "icons": [
     {
-      "src": "fav-clima.png",
+      "src": "https://giuliaamaral.github.io/AplicativoDeClima/fav-clima.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "fav-clima.png",
+      "src": "https://giuliaamaral.github.io/AplicativoDeClima/fav-clima.png",
       "type": "image/png",
       "sizes": "192x192"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://giuliaamaral.github.io/AplicativoDeClima/",
   "display": "standalone",
   "theme_color": "#ffffff",
   "background_color": "#185086"
