@@ -181,7 +181,7 @@ export default function Inicio() {
                         dadosCidade?.weather?.[0]?.icon && (<img alt="icone" src={`https://openweathermap.org/img/wn/${dadosCidade?.weather?.[0]?.icon}@2x.png`}></img>)
                       }
 
-                      <h1 className="display-1 fw-bold">{dadosCidade?.main?.temp}</h1>
+                      <h1 className="display-1 fw-bold">{dadosCidade?.main?.temp}°C</h1>
                       <h3>{dadosCidade?.weather?.[0]?.description}</h3>
                       <p>Sensação térmica: {dadosCidade?.main?.feels_like}°C</p>
 
