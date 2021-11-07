@@ -14,9 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      env:
-        PUBLIC_URL: https://giuliaamaral.github.io/AplicativoDeClima/
-        
     - name: Checkout code
       uses: actions/checkout@v2
     
@@ -36,6 +33,9 @@ jobs:
       with:
         name: production-files
         path: ./build
+        
+      env:
+        PUBLIC_URL: https://giuliaamaral.github.io/AplicativoDeClima/
   
   deploy:
     name: Deploy
