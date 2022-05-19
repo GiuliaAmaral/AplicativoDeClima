@@ -1,28 +1,28 @@
 {
   "files": {
     "main.css": "/AplicativoDeClima/static/css/main.cbe85adf.chunk.css",
-    "main.js": "/AplicativoDeClima/static/js/main.8e08d3ee.chunk.js",
-    "main.js.map": "/AplicativoDeClima/static/js/main.8e08d3ee.chunk.js.map",
-    "runtime-main.js": "/AplicativoDeClima/static/js/runtime-main.8a7ba5fb.js",
-    "runtime-main.js.map": "/AplicativoDeClima/static/js/runtime-main.8a7ba5fb.js.map",
+    "main.js": "/AplicativoDeClima/static/js/main.f494aea1.chunk.js",
+    "main.js.map": "/AplicativoDeClima/static/js/main.f494aea1.chunk.js.map",
+    "runtime-main.js": "/AplicativoDeClima/static/js/runtime-main.47911c37.js",
+    "runtime-main.js.map": "/AplicativoDeClima/static/js/runtime-main.47911c37.js.map",
     "static/css/2.763d08f1.chunk.css": "/AplicativoDeClima/static/css/2.763d08f1.chunk.css",
-    "static/js/2.8b41e30d.chunk.js": "/AplicativoDeClima/static/js/2.8b41e30d.chunk.js",
-    "static/js/2.8b41e30d.chunk.js.map": "/AplicativoDeClima/static/js/2.8b41e30d.chunk.js.map",
-    "static/js/3.3ab0a287.chunk.js": "/AplicativoDeClima/static/js/3.3ab0a287.chunk.js",
-    "static/js/3.3ab0a287.chunk.js.map": "/AplicativoDeClima/static/js/3.3ab0a287.chunk.js.map",
+    "static/js/2.25d20735.chunk.js": "/AplicativoDeClima/static/js/2.25d20735.chunk.js",
+    "static/js/2.25d20735.chunk.js.map": "/AplicativoDeClima/static/js/2.25d20735.chunk.js.map",
+    "static/js/3.41aad8df.chunk.js": "/AplicativoDeClima/static/js/3.41aad8df.chunk.js",
+    "static/js/3.41aad8df.chunk.js.map": "/AplicativoDeClima/static/js/3.41aad8df.chunk.js.map",
     "index.html": "/AplicativoDeClima/index.html",
     "static/css/2.763d08f1.chunk.css.map": "/AplicativoDeClima/static/css/2.763d08f1.chunk.css.map",
     "static/css/main.cbe85adf.chunk.css.map": "/AplicativoDeClima/static/css/main.cbe85adf.chunk.css.map",
-    "static/js/2.8b41e30d.chunk.js.LICENSE.txt": "/AplicativoDeClima/static/js/2.8b41e30d.chunk.js.LICENSE.txt",
+    "static/js/2.25d20735.chunk.js.LICENSE.txt": "/AplicativoDeClima/static/js/2.25d20735.chunk.js.LICENSE.txt",
     "static/media/bootstrap-icons.css": "/AplicativoDeClima/static/media/bootstrap-icons.f2539a50.woff2",
     "static/media/fav-clima.02f1373e.png": "/AplicativoDeClima/static/media/fav-clima.02f1373e.png",
     "static/media/global.css": "/AplicativoDeClima/static/media/tarde.0464304d.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8a7ba5fb.js",
+    "static/js/runtime-main.47911c37.js",
     "static/css/2.763d08f1.chunk.css",
-    "static/js/2.8b41e30d.chunk.js",
+    "static/js/2.25d20735.chunk.js",
     "static/css/main.cbe85adf.chunk.css",
-    "static/js/main.8e08d3ee.chunk.js"
+    "static/js/main.f494aea1.chunk.js"
   ]
 }
