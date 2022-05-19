@@ -120,7 +120,7 @@ export default function Inicio() {
       };
   
       try {
-        let respostaApi = await fetch(`https://api.geonames.org/timezoneJSON?lat=${latitude}&lng=${longitude}&username=giuliaamaral`, requestOptions);
+        let respostaApi = await fetch(`http://api.geonames.org/timezoneJSON?lat=${latitude}&lng=${longitude}&username=giuliaamaral`, requestOptions);
         respostaApi = await respostaApi.json();
         let data = new Date(respostaApi.time);
         let hora = data.getHours();
